@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+
+*{
+margin:0;
+box-sizing:border-box;
+padding: 0;
+}
+
+:root{
+  --fuente:'Be Vietnam', sans-serif;
+  --acho: 1440px;
+  --bright-red: hsl(12, 88%, 59%);
+  --dark-blue: hsl(228, 39%, 23%);
+  --vary-gray: hsl(0, 0%, 98%);
+  --pale-red:hsl(13, 100%, 96%);
+  --grayish-blue: hsl(227, 12%, 61%);
+}
+
+body{
+  font-family: var(--fuente);
+  width: 1600px;
+  background-image: url(/images/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  background-position-x: 950px;
+  background-position-y: -200px;
+}
+
+.btn__started{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__started > button{
+  border: none;
+  outline: none;
+  background-color: var(--bright-red);
+  color: var(--vary-gray);
+  padding: 20px 60.7px;
+  border-radius: 30px;
+  box-shadow: 0px 5px 8px var(--bright-red);
+}
+
+.btn__started-left{
+  justify-content: flex-start;
+}
+
+.header {
+  max-width: var(--acho);
+  display: flex;
+  margin: 50px auto;
+  height: 60px;
+  align-items: center;
+}
+
+.header__nav{
+  flex: 1;
+  display: flex;
+  font-weight: 700;
+}
+
+.header__lista{
+  list-style: none;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__link{
+  margin: 0 20px;
+  text-decoration: none;
+  color: var(--dark-blue);
+}
+
+.header__logo{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+/* FIN HEADER */
+
+/* INICIO PRINCIPAL */
+
+.principal{
+  width: var(--acho);
+  display: flex;
+  margin: 100px auto 0 auto;
+  flex-wrap: wrap;
+}
+
+.principal section{
+  width: 50%;
+  border: solid 1px #000;
+}
+
+.section1 > *{
+  margin-bottom: 40px;
+}
+
+.section1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section1__titulo{
+  color: var(--dark-blue);
+  font-size: 4rem;
+}
+
+.section1__parrafo{
+  color: var(--grayish-blue);
+  width: 50%;
+  line-height: 1.5rem;
+}
+
+/* FIN SECTION1 */
+
+.section2{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section2 img{
+  width: 100%;
+  max-width: 550px;
+}
+
+/* FIN SECTION2 */
+
+/* INICIO SECTION3 */
+
+.section3 {
+  margin-top: 80px;
+}
+
+.section3 > *{
+  margin-bottom: 40px;
+}
+
+.section3__titulo{
+  font-size: 3rem;
+  color: var(--dark-blue);
+  line-height: 3.2rem;
+}
+
+.section3__parrafo{
+  color: var(--grayish-blue);
+  width: 50%;
+  line-height: 1.5rem;
+}
+
+/* FIN SECTION3 */
+
+/* INICIO SECTION4 */
+
+
+.section4{
+  margin-top: 80px;
+}
+
+.section4__media {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.section4__numero {
+  background-color: var(--bright-red);
+  color: white;
+  border-radius: 20px;
+  height: 45px;
+  width: 80px;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+.section4__texto{
+  flex: 1;
+  padding: 8px 160px 8px 20px;
+}
+
+.section4__titulo{
+  color: var(--dark-blue);
+  margin-bottom: 20px;
+}
+
+.section4__parrafo{
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+}
+
+/* FIN PRINCIPAL */
+
+/* INICIO TESTIMONIOS */
+
+.testimonios{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonios__titulo{
+  font-size: 3rem;
+  color: var(--dark-blue);
+}
+
+.cards {
+  display: flex;
+  margin-top: 130px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: var(--vary-gray);
+  flex: 1;
+  margin: 0 10px;
+  padding: 0 40px 40px 40px;
+  text-align: center;
+}
+.card__imagen {
+  width: 100px;
+  height: 100px;
+  transform: translate(0, -40%);
+}
+.card__titulo {
+  color: var(--grayish-blue);
+  margin-bottom: 20px;
+}
+.card__parrafo {
+  color: var(--grayish-blue);
+  line-height: 1.5rem;
+}
+
+/* FIN TESTIMONIOS */
+
+/* INICIO RESPONSIVE */
+
+@media screen and (max-width: 1440px) {
+  .principal{
+    padding: 0 100px 0 100px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .section1__parrafo, .section3__parrafo {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width:950px){
+  body{
+    width: 1600px;
+    text-align: center;
+  }
+
+  .header{
+    width: 950px;
+  }
+
+  .principal{
+    transform: translate(300px);
+    flex-direction: column;
+  }
+  .principal__section{
+    width: 100%;
+  }
+  .cards{
+    flex-direction: column;
+    width: 50%;
+  }
+  
+}
+
+
